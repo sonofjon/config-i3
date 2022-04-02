@@ -1,9 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# Set mod key
-#  Options: Mod1=<Alt> | Mod4=<Super>
-set $mod Mod4
 ### Layout ###
 
 # Set default desktop layout
@@ -32,6 +29,10 @@ font xft:URWGothic-Book 11
 
 
 ### Key bindings ###
+
+# Set mod key
+#  Options: Mod1=<Alt> | Mod4=<Super>
+set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod

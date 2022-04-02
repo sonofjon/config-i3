@@ -15,6 +15,8 @@ default_floating_border normal
 # Hide borders
 hide_edge_borders none
 
+# Focus mode
+# focus_follows_mouse no
 
 # Font for window titles
 #   (will also be used by the bar unless a different font is used in
@@ -125,8 +127,6 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
-# focus_follows_mouse no
 
 # Change focus
 # bindsym $mod+j focus left

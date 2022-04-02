@@ -15,10 +15,6 @@ default_floating_border normal
 # Hide borders
 hide_edge_borders none
 
-# Change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -39,6 +35,10 @@ floating_modifier $mod
 
 # Start a terminal
 bindsym $mod+Return exec terminal
+# Change borders
+bindsym $mod+u border none
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
 
 # Kill focused window
 bindsym $mod+Shift+q kill

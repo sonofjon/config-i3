@@ -85,8 +85,6 @@ set $mod Mod4
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# Start a terminal
-bindsym $mod+Return exec terminal
 # Change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
@@ -109,11 +107,13 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+# Start a terminal
+bindsym $mod+Return exec terminal
+
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
+bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom

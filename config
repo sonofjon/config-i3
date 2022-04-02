@@ -1,13 +1,16 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+# Set mod key
+#  Options: Mod1=<Alt> | Mod4=<Super>
 set $mod Mod4
 
-# set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
+# Set default desktop layout
+#   Options: tiling (default) | stacking | tabbed
+# workspace_layout tiling
 
-# Configure border style <normal|1pixel|pixel xx|none|pixel>
+# Configure border style
+#   Options: normal | 1pixel | pixel xx | none | pixel
 default_border pixel 1
 default_floating_border normal
 

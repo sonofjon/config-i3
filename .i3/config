@@ -343,6 +343,10 @@ bar {
     # font xft:URWGothic-Book 11
     strip_workspace_numbers yes
 
+    # Height in pixels
+    #   (extension with i3-gaps)
+    # height 25
+
     colors {
         background #222D31
         statusline #F9FAF9

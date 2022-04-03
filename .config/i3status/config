@@ -15,6 +15,7 @@ general {
 }
 
 order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "memory"
 order += "load"
 # order += "disk /"
@@ -29,6 +30,12 @@ cpu_usage {
         # format = " cpu: %usage "
         format = "  %usage "
 }
+
+# TODO
+cpu_temperature 0 {
+        # format = "Temp: %degrees °C"
+        format = " %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/temp1_input"
 }
 
 memory {

@@ -10,8 +10,8 @@ general {
         colors = true
         interval = 1
         color_good = "#2AA198"
-        color_bad = "#586E75"
-        color_degraded = "#DC322F"
+        color_degraded = "#586E75"
+        color_bad = "#DC322F"
 }
 
 order += "cpu_usage"

@@ -286,6 +286,9 @@ mode "resize" {
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
+# Hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
+
 
 ### Autostart ###
 
@@ -372,8 +375,6 @@ bar {
     }
 }
 
-# Hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.   child_border

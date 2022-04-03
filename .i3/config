@@ -29,14 +29,14 @@ font xft:URWGothic-Book 11
 # Workspace names
 #   Examples: set $ws1 1:mail
 #             set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
+set $ws1 1: Web
+set $ws2 2: Terminal
+set $ws3 3: Files
+set $ws4 4: Work
 set $ws5 5
 set $ws6 6
 set $ws7 7
-set $ws8 8
+set $ws8 8: Play
 
 # Open applications on specific workspaces
 assign [class="Firefox"] $ws1

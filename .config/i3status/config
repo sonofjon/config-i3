@@ -70,8 +70,8 @@ wireless _first_ {
 
 battery all {
         # format = "%status %percentage %remaining %emptytime"
-        format = " %status %percentage"
-        format_down = "No battery"
+        format = " %status %percentage "
+        format_down = " no battery "
         last_full_capacity = true
         integer_battery_capacity = true
         # status_chr = ""
@@ -83,7 +83,7 @@ battery all {
         # status_full = ""
         status_full = ""
         low_threshold = 15
-        threshold_type = time
+        threshold_type = percentage
 }
 
 tztime local {

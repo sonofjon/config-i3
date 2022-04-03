@@ -9,7 +9,7 @@
 
 # Border style
 #   Options: normal | 1pixel | pixel xx | none | pixel
-default_border pixel 1
+default_border pixel 2
 default_floating_border normal
 
 # Hide borders
@@ -87,7 +87,7 @@ floating_modifier $mod
 
 # Change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 
 # Kill focused window

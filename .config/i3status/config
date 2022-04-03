@@ -43,9 +43,9 @@ memory {
 }
 
 load {
-        # max_threshold = 0.3
         # format = " load: %1min / %5min / %15min "
         format = "  %1min / %5min / %15min "
+        max_threshold = 2 
 }
 
 disk "/" {

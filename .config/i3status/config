@@ -15,8 +15,8 @@ general {
 }
 
 order += "cpu_usage"
-order += "cpu_temperature 0"
 order += "memory"
+order += "cpu_temperature 0"
 order += "load"
 # order += "disk /"
 # order += "disk /home"
@@ -36,7 +36,8 @@ cpu_usage {
 cpu_temperature 0 {
         # format = "Temp: %degrees °C"
         format = " %degrees °C"
-        path = "/sys/devices/platform/coretemp.0/temp1_input"
+        # path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp2_input"
+        path = "/sys/devices/platform/applesmc.768/temp2_input"
 }
 
 memory {

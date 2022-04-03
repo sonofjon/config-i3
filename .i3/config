@@ -142,8 +142,6 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # bindsym $mod+k focus down
 # bindsym $mod+l focus up
 # bindsym $mod+semicolon focus right
-
-# Change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -154,8 +152,6 @@ bindsym $mod+Right focus right
 # bindsym $mod+Shift+k move down
 # bindsym $mod+Shift+l move up
 # bindsym $mod+Shift+semicolon move right
-
-# Move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -258,23 +254,21 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# Resize window (you can also use the mouse for that)
+# Resize window
+#   (you can also use the mouse)
 bindsym $mod+r mode "resize"
 mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
     # Pressing left will shrink the window’s width.
-    # Pressing right will grow the window’s width.
-    # Pressing up will shrink the window’s height.
-    # Pressing down will grow the window’s height.
-    bindsym j resize shrink width 5 px or 5 ppt
-    bindsym k resize grow height 5 px or 5 ppt
-    bindsym l resize shrink height 5 px or 5 ppt
-    bindsym semicolon resize grow width 5 px or 5 ppt
-
-    # same bindings, but for the arrow keys
+    # bindsym j resize shrink width 5 px or 5 ppt
     bindsym Left resize shrink width 10 px or 10 ppt
+    # Pressing right will grow the window’s width.
+    # bindsym k resize grow height 5 px or 5 ppt
     bindsym Down resize grow height 10 px or 10 ppt
+    # Pressing up will shrink the window’s height.
+    # bindsym l resize shrink height 5 px or 5 ppt
     bindsym Up resize shrink height 10 px or 10 ppt
+    # Pressing down will grow the window’s height.
+    # bindsym semicolon resize grow width 5 px or 5 ppt
     bindsym Right resize grow width 10 px or 10 ppt
 
     # exit resize mode: Enter or Escape

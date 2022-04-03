@@ -51,6 +51,12 @@ ethernet _first_ {
         format_down = " no lan "
 }
 
+# TODO
+wireless _first_ {
+        format_up = " lan: %ip %speed "
+        format_down = " no wifi "
+}
+
 battery all {
         # format = "%status %percentage %remaining %emptytime"
         format = " %status %percentage"

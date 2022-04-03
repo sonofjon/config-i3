@@ -35,8 +35,11 @@ memory {
         # format = " %used / %available "
         # format = " memory: %used "
         format = "  %used "
+        memory_used_method = "classical"
+        # memory_used_method = "memavailable"
         threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        threshold_critical = "100M"
+        format_degraded = " memory: %used "
 }
 
 load {

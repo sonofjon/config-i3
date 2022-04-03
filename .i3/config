@@ -289,6 +289,9 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
+# Toggle language layout
+bindsym $mod+k exec --no-startup-id xkb-switch -n
+
 
 ### Autostart ###
 
@@ -309,6 +312,8 @@ exec --no-startup-id blueman-applet
 
 # Language
 
+# exec "setxkbmap -option 'grp:alt_shift_toggle' -layout us,se"
+exec "setxkbmap -layout us,se"
 exec_always --no-startup-id sbxkb
 
 # Conky

@@ -26,7 +26,7 @@ order += "battery all"
 order += "tztime local"
 
 cpu_usage {
-        format = " cpu  %usage "
+        format = " cpu %usage "
 }
 
 memory {
@@ -72,5 +72,5 @@ battery all {
 
 tztime local {
         # format = "%Y-%m-%d %H:%M:%S"
-        format = " %d.%m. %H:%M "
+        format = " %H:%M "
 }

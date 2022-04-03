@@ -119,13 +119,23 @@ bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
+
+# Compositor
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+
+# Notifications
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+
+# Screenshots
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+
+# Help
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+
+# Kill
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # Change focus

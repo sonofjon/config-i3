@@ -116,7 +116,7 @@ mode "resize" {
 bindsym $mod+f fullscreen toggle
 
 # Hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+bindsym $mod+a bar mode toggle
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -126,8 +126,8 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # Change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 2
-bindsym $mod+n border normal
+bindsym $mod+i border pixel 2
+bindsym $mod+o border normal
 
 # Focus
 
@@ -152,12 +152,12 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # Tiling
 
 # Change container layout
-bindsym $mod+s layout stacking
+bindsym $mod+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -167,13 +167,13 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+t split toggle
 
 # Toggle tiling / floating
-bindsym $mod+space floating toggle
+bindsym $mod+j floating toggle
 
 # Change focus between tiling / floating windows
-bindsym $mod+Shift+space focus mode_toggle
+bindsym $mod+Shift+j focus mode_toggle
 
 # Toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+y sticky toggle
 
 # Workspaces
 
@@ -237,22 +237,22 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+z exec --no-startup-id morc_menu
 
 # Start sound mixer
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+m exec terminal -e 'alsamixer'
+#bindsym $mod+m exec pavucontrol
 
 # Start a terminal
 bindsym $mod+Return exec terminal
 
 # Start other applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+F4 exec terminal -e 'bmenu'
 
 # Screenshots
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+s exec --no-startup-id i3-scrot
+bindsym $mod+Shift+s --release exec --no-startup-id i3-scrot -w
+bindsym $mod+Ctrl+s --release exec --no-startup-id i3-scrot -s
 
 # System
 
@@ -267,7 +267,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id blurlock
+bindsym $mod+Shift+l exec --no-startup-id blurlock
 
 # Exit i3 (log out)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -298,8 +298,8 @@ bindsym $mod+k exec --no-startup-id xkb-switch -n
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Compositor
-bindsym $mod+p exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+p exec --no-startup-id picom -b
+bindsym $mod+Ctrl+c exec --no-startup-id pkill picom
+bindsym $mod+c exec --no-startup-id picom -b
 
 # Notifications
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"

@@ -324,8 +324,8 @@ exec --no-startup-id blueman-applet
 
 # Language
 
-# exec "setxkbmap -option 'grp:alt_shift_toggle' -layout us,se"
-exec "setxkbmap -layout us,se"
+# exec --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle' -layout us,se"
+exec --no-startup-id "setxkbmap -layout us,se"
 exec_always --no-startup-id sbxkb
 
 # Conky

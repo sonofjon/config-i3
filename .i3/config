@@ -80,6 +80,8 @@ for_window [urgent=latest] focus
 
 ### Key bindings ###
 
+# Free keys: g, l, n, x
+
 # Set mod key
 #   Options: Mod1=<Alt> | Mod4=<Super>
 set $mod Mod4

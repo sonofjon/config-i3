@@ -251,6 +251,7 @@ bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F4 exec terminal -e 'bmenu'
+bindsym $mod+F5 exec pamac-manager
 
 # Screenshots
 bindsym $mod+s exec --no-startup-id i3-scrot

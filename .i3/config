@@ -32,18 +32,18 @@ font xft:URWGothic-Book 11
 #   Examples: set $ws1 1:mail
 #             set $ws2 2:
 set $ws1 1:  Web
-set $ws2 2:  Terminal
-set $ws3 3:  Files
-set $ws4 4:  Work
-set $ws5 5
-set $ws6 6
+set $ws2 2:  Admin
+set $ws3 3:  Terminal
+set $ws4 4:  Files
+set $ws5 5:  Work
+set $ws6 6:  Other
 set $ws7 7:  Music
 set $ws8 8:  Video
 
 # Open applications on specific workspaces
 assign [class="firefox"] $ws1
-assign [class="URxvt"] $ws2
-assign [class="Pcmanfm"] $ws3
+assign [class="URxvt"] $ws3
+assign [class="Pcmanfm"] $ws4
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

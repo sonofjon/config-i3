@@ -165,10 +165,10 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+t split toggle
 
 # Toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # Change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # Toggle sticky
 bindsym $mod+Shift+s sticky toggle

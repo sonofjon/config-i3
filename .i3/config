@@ -348,6 +348,10 @@ exec_always --no-startup-id fix_xcursor
 
 ### Environment ###
 
+# En5Bable natural scrolling (trackpad)
+exec_always xinput set-prop 14 289 0
+
+
 ### Bar ###
 
 # Start i3bar

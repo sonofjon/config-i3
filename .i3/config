@@ -31,7 +31,7 @@ font xft:URWGothic-Book 11
 # Workspace names
 #   Examples: set $ws1 1:mail
 #             set $ws2 2:
-set $ws1 1:  Web
+set $ws1 1:  Web
 set $ws2 2:  Admin
 set $ws3 3:  Terminal
 set $ws4 4:  Files
@@ -275,7 +275,7 @@ bindsym $mod+Shift+l exec --no-startup-id blurlock
 
 # Shutdown menu
 bindsym $mod+0 mode "$mode_system"
-set $mode_system  [L]ock,  [E]xit,  [S]uspend,  [H]ibernate,  [R]eboot,  [P]oweroff
+set $mode_system  [L]ock,  [E]xit,  [S]uspend,  [H]ibernate,  [R]eboot,  [P]oweroff
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"

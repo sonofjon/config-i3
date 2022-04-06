@@ -30,7 +30,7 @@ order += "tztime local"
 
 cpu_usage {
         # format = " cpu: %usage "
-        format = "  %usage "
+        format = "  %usage "
 }
 
 # TODO
@@ -44,7 +44,7 @@ cpu_temperature 0 {
 memory {
         # format = " %used / %available "
         # format = " memory: %used "
-        format = "  %used "
+        format = "  %used "
         memory_used_method = "classical"
         # memory_used_method = "memavailable"
         threshold_degraded = "1G"

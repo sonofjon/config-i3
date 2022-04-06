@@ -266,6 +266,9 @@ bindsym $mod+Shift+c reload
 #   executes exec_always)
 bindsym $mod+Shift+r restart
 
+# Reload the Xresources
+bindsym $mod+Ctrl+r exec xrdb ~/.Xresources
+
 # Lock screen
 bindsym $mod+Shift+l exec --no-startup-id blurlock
 

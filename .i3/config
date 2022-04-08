@@ -246,7 +246,7 @@ bindsym $mod+Return exec terminal
 ## Start other applications
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+# bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F4 exec terminal -e 'bmenu'
 bindsym $mod+F5 exec pamac-manager
 

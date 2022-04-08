@@ -268,7 +268,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 ## Reload the Xresources
-bindsym $mod+Ctrl+r exec xrdb ~/.Xresources
+bindsym $mod+Ctrl+r exec --no-startup-id xrdb ~/.Xresources
 
 ## Lock screen
 bindsym $mod+Shift+l exec --no-startup-id blurlock
@@ -350,7 +350,7 @@ exec_always --no-startup-id fix_xcursor
 #### Environment ####
 
 ## Enable natural scrolling (trackpad)
-exec_always xinput set-prop 14 289 0
+exec_always --no-startup-id xinput set-prop 14 289 0
 
 
 #### Bar ####

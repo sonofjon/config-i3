@@ -302,8 +302,10 @@ mode "$mode_system" {
 bindsym $mod+k exec --no-startup-id xkb-switch -n
 
 ## Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; --no-startup-id notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; --no-startup-id notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 10; \
+#         exec --no-startup-id notify-send 'brightness up'
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 10; \
+#         exec --no-startup-id notify-send 'brightness down'
 
 ## Compositor
 bindsym $mod+Ctrl+c exec --no-startup-id pkill picom; \

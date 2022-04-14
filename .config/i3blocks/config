@@ -11,15 +11,6 @@ command=${SCRIPT_DIR}/${BLOCK_NAME}/${BLOCK_NAME}
 separator=true
 separator_block_width=15
 
-[documentation]
-full_text=Documentation
-website=https://vivien.github.io/i3blocks
-command=xdg-open "$website"
-color=#f12711
-
-[greetings]
-color=#f5af19
-command=echo "Hello, $USER!"
 interval=once
 
 [time]

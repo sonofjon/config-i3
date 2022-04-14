@@ -16,6 +16,137 @@ separator_block_width=15
 # interval=3600
 # # color=#A4C2F4
 
+[cpu_usage]
+interval=3
+min_width=x  99%
+LABEL= 
+T_WARN=50
+T_CRIT=80
+DECIMALS=0
+COLOR_NORMAL=#FFFFFF
+# COLOR_WARN=#FFFC00
+# COLOR_CRIT=#FF0000
+
+# [cpu_usage2]
+# interval=persist
+# markup=pango
+# min_width=x 99%
+# LABEL=
+# REFRESH_TIME=1
+# WARN_PERCENT=50
+# CRIT_PERCENT=80
+# DECIMALS=0
+
+# [cpu_util_detailed]
+# label=
+# interval=repeat
+# markup=pango
+# # report_time=5
+# stats=usr sys iowait
+# # format=%6.2f
+# # format=%5.1f
+# format=%3.0f
+# # warn=80
+# usr_color=white
+# # nice_color=yellow
+# sys_color=grey
+# iowait_color=yellow
+# # irq_color=purple
+# # soft_color=violet
+# # steal_color=orange
+# # guest_color=cyan
+# # gnice_color=blue
+# # idle_color=white
+# # total_color=white
+
+# [temperature]
+# label= 
+# interval=10
+# # T_WARN=70
+# # T_CRIT=90
+# # SENSOR_CHIP="applesmc-isa-0300"
+# SENSOR_CHIP="coretemp-isa-0000"
+
+# [memory]
+# label=MEM 
+# interval=30
+# instance=mem
+# PERCENT=0
+
+# [memory]
+# label=SWAP 
+# interval=30
+# instance=swap
+# PERCENT=0
+
+# [memory2] 
+# interval=persist
+# markup=pango
+# bar_chars=_▁▂▃▄▅▆▇█ 
+# # bar_size=10
+# # critical=80
+# # warning=50
+# # color_critical=#FF7373
+# # color_warning=#FFA500
+
+# [memory2]
+# label= 
+# interval=persist
+# markup=pango
+# bar_chars=_▏▎▍▌▋▊▉██
+# bar_size=20
+# critical=50
+# warning=20
+# color_critical=#d9534f
+
+[load_average]
+label= 
+interval=10
+
+# [disk]
+# interval=60
+# LABEL=  
+# # DIR=/
+# ALERT_LOW=10
+
+[disk-io]
+# command=$SCRIPT_DIR/disk-io/disk-io -w 3 -M -P 0
+interval=persist
+markup=pango
+# instance=/^sda/
+LABEL= 
+DT=3
+# MB_ONLY=1
+# KB_ONLY=1
+# WIDTH=4
+# MB_PRECISION=1
+# KB_PRECISION=0
+# REGEX=/^(s|h)d[a-zA-Z]+/
+# THRESHOLD=0
+# WARN_COLOR="#FF0000"
+# SEPARATOR=/
+# SUFFIX="B/s"
+
+# [ssid]
+# label= 
+# interval=5
+# # INTERFACE=wlan0
+
+[essid]
+label= 
+interval=5
+# INTERFACE=wlan0
+
+# [wifi]
+# label= 
+# interval=5
+# # INTERFACE=wlan0
+# COLOR_GE80=#FFFFFF
+# COLOR_GE60=#FFF600
+# COLOR_GE40=#FFAE00
+# COLOR_LOWR=#FF0000
+# COLOR_DOWN=#FF0000
+
 # [ip]
 # command=hostname -i | awk '{ print "IP:" $1 }'
 # interval=5
@@ -25,8 +156,203 @@ separator_block_width=15
 # command=wget -qO - icanhazip.com
 # interval=5
 
-interval=once
+[iface]
+interval=5
+# color=#00FF00
+LABEL=
+# IFACE=wlan0
+# ADDRESS_FAMILY=inet6?
+# display_wifi_name=1
 
-[time]
-command=date '+%Y-%m-%d %H:%M:%S'
-interval=1
+# [bandwidth]
+# interval=3
+# INTERFACE=wlan0
+# # INLABEL= 
+# # INLABEL= 
+# INLABEL= 
+# #INLABEL= 
+# # OUTLABEL= 
+# # OUTLABEL= 
+# OUTLABEL= 
+# # OUTLABEL= 
+# # TREAT_UNKNOWN_AS_UP=0
+
+# [bandwidth2]
+# interval=persist
+# markup=pango
+# LABEL=
+# # INTERFACE=(checks all interfaces)
+# # USE_BITS=0
+# # USE_BYTES=1
+# # WARN_RX=307200
+# # WARN_TX=30720
+# # CRIT_RX=512000
+# # CRIT_TX=51200
+# # USE_SI=0
+
+[bandwidth3]
+interval=persist
+markup=pango
+# LABEL=<span font='FontAwesome'>  </span>
+# IFACE=[automatically determined]
+# DT=3
+UNIT=Mb
+# Exposed variables: rx, wx, tx, unit, iface
+# PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
+
+# [speedtest]
+# interval=3600
+
+# [brightness]
+# command=$SCRIPT_DIR/$BLOCK_NAME/bin/brightness -a /sys/class/backlight/intel_backlight/actual_brightness -m /sys/class/backlight/intel_backlight/max_brightness
+# interval=persist
+# # label=
+
+# [backlight]
+# label=
+# interval=10
+# # STEP_SIZE=5
+# # USE_SUDO=0
+
+[volume]
+interval=once
+signal=10
+LABEL= 
+# STEP=5%
+# MIXER=[determined automatically]
+# SCONTROL=[determined automatically]
+# NATURAL_MAPPING=0
+
+# [volume-pulseaudio]
+# interval=once
+# signal=1
+# # MIXER=[determined automatically]
+# # SCONTROL=[determined automatically]
+# # #exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+# # LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+# # SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+# # AUDIO_HIGH_SYMBOL='  '
+# # AUDIO_MED_THRESH=50
+# # AUDIO_MED_SYMBOL='  '
+# # AUDIO_LOW_THRESH=0
+# # AUDIO_LOW_SYMBOL='  '
+# # AUDIO_DELTA=5
+# # DEFAULT_COLOR="#ffffff"
+# # MUTED_COLOR="#a0a0a0"
+# # USE_ALSA_NAME=0
+# # USE_DESCRIPTION=0
+# # # SUBSCRIBE=1   # requires interval=persist and always uses LONG_FORMAT
+# # SUBSCRIBE=0
+
+# [miccontrol]
+# # label=MIC 
+# interval=10
+# signal=10
+# SOURCE=alsa_input.pci-0000_00_1f.3.analog-stereo
+
+[kbdd_layout]
+label= 
+interval=persist
+
+# [key_layout]
+# label=
+# interval=10
+
+# [toggle]
+# label=
+# interval=once
+# COMMAND_ON=swaymsg -q exec wayvnc localhost
+# COMMAND_OFF=kill $(ps -e -o pid -o exe | grep $(which wayvnc) | awk '{print $1}')
+# COMMAND_STATUS=ps -eo exe | grep $(which wayvnc)
+# # COLOR_ON=#ffffff
+# # COLOR_OFF=#5f6368
+
+# [battery]
+# interval=5
+# # LABEL=BAT
+# LABEL=⚡ 
+# #BAT_NUMBER=0
+
+[battery2]
+interval=5
+markup=pango
+
+# [batterybar]
+# label=⚡ 
+# interval=5
+# markup=pango
+# # min_width=bat: ■■■■■
+# min_width=bat: ■
+# # C1=#FF0027
+# # C2=#FF3B05
+# # C3=#FFB923
+# # C4=#FFD000
+# # C5=#E4FF00
+# # C6=#ADFF00
+# # C7=#6DFF00
+# # C8=#10BA00
+# # CHARGING_COLOR=#00AFE3
+# # FULL_COLOR=#FFFFFF
+# # AC_COLOR=#535353
+
+# [battery-poly]
+# interval=5
+# LABEL=⚡ 
+
+[calendar]
+interval=10
+LABEL= 
+DATEFMT=+%H:%M
+SHORTFMT=+%H:%M
+HEIGHT=180
+WIDTH=220
+
+# [time]
+# command=date '+%H:%M'
+# interval=10
+
+# [time]
+# interval=10
+# # TZ_FILE=~/.tz
+# STRFTIME_FORMAT=%H:%M
+# # TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
+# # TZONES=$DEFAULT_TZ
+# # TZ_LABELS=,Brazil,AU,Hyderabad
+
+[arch-update]
+interval= 43200
+markup=pango
+LABEL= 
+QUIET=true
+# WATCH=^linux.* ^pacman.*
+# BASE_COLOR=#5fff5f
+# UPDATE_COLOR=#FFFF85
+# AUR=true
+
+# [aur-update]
+# interval=43200
+# markup=pango
+# format=json
+# UPDATE_COLOR=red
+# QUIET=1
+# IGNORE=
+# # CACHE_UPDATES=0
+
+[shutdown_menu]
+full_text=
+# FG_COLOR=#bbbbbb
+# BG_COLOR=#111111
+# HLFG_COLOR=#111111
+# HLBG_COLOR=#bbbbbb
+# BORDER_COLOR=#222222
+# ROFI_TEXT=Menu:
+# ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+ZENITY_TITLE=Menu
+ZENITY_TEXT=Action:
+ZENITY_OPTIONS=--column= --hide-header
+# ENABLE_CONFIRMATIONS=true (must be true or false)
+LAUNCHER=zenity
+LOCKSCRIPT=blurlock
+
+# [dimmer]
+# command=(~/git/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME ; echo) | $SCRIPT_DIR/$BLOCK_NAME/dimmer

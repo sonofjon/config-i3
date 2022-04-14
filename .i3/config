@@ -399,7 +399,8 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
     # font xft:URWGothic-Book 11
-    font xft:DejaVu Sans 10
+    font xft:DejaVu Sans Mono 9
+    # font xft:TerminessTTFNerdFontMono 12
     strip_workspace_numbers yes
 
     # Height in pixels

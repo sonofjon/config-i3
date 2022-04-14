@@ -388,7 +388,7 @@ exec_always --no-startup-id xinput set-prop 14 289 0
 bar {
     i3bar_command i3bar
     # status_command i3status
-    status_command SCRIPT_DIR=/usr/lib/i3blocks i3blocks
+    status_command SCRIPT_DIR=~/git/i3blocks-contrib i3blocks
     position bottom
 
     # Set primary output first

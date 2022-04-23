@@ -177,28 +177,32 @@ LABEL=
 # # OUTLABEL= 
 # # TREAT_UNKNOWN_AS_UP=0
 
-# [bandwidth2]
-# interval=persist
-# markup=pango
-# LABEL=
-# # INTERFACE=(checks all interfaces)
-# # USE_BITS=0
-# # USE_BYTES=1
-# # WARN_RX=307200
-# # WARN_TX=30720
-# # CRIT_RX=512000
-# # CRIT_TX=51200
-# # USE_SI=0
-
-[bandwidth3]
+[bandwidth2]
 interval=persist
 markup=pango
-# LABEL=<span font='FontAwesome'>  </span>
-# IFACE=[automatically determined]
-# DT=3
-UNIT=Mb
-# Exposed variables: rx, wx, tx, unit, iface
-# PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
+LABEL= 
+# REFRESH_TIME=3
+# INTERFACE=(checks all interfaces)
+# USE_BITS=0
+# USE_BYTES=1
+# WARN_RX=307200
+# WARN_TX=30720
+# CRIT_RX=512000
+# CRIT_TX=51200
+# USE_SI=0
+
+# [bandwidth3]
+# interval=persist
+# markup=pango
+# # LABEL=<span font='FontAwesome'>  </span>
+# # IFACE=[automatically determined]
+# # DT=3
+# # UNIT=Mb
+# # UNIT=KB
+# # Exposed variables: rx, wx, tx, unit, iface
+# PRINTF_COMMAND=printf " %-5.1f/%5.1f %s/s\n", rx, wx, unit;
+# # PRINTF_COMMAND=printf "  %-3.0f/%3.0f %s/s\n", rx, wx, unit;
+# PRINTF_COMMAND=printf "  %-4.0f/%4.0f %s/s\n", rx, wx, unit;
 
 # [speedtest]
 # interval=3600

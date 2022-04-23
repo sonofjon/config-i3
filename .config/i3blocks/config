@@ -250,6 +250,13 @@ LABEL=
 # signal=10
 # SOURCE=alsa_input.pci-0000_00_1f.3.analog-stereo
 
+# [bluetooth]
+# markup=pango
+# interval=3
+# # ON_COLOR=#50fa7b
+# # OFF_COLOR=#FF5555
+# # ICON_COLOR=#8be9fd
+
 [kbdd_layout]
 label= 
 interval=persist
@@ -298,6 +305,11 @@ markup=pango
 # [battery-poly]
 # interval=5
 # LABEL=⚡ 
+
+# [power-profiles]
+# interval=once
+# signal=2
+# label= 
 
 [calendar]
 interval=10

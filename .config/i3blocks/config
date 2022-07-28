@@ -344,6 +344,7 @@ QUIET=true
 # BASE_COLOR=#5fff5f
 # UPDATE_COLOR=#FFFF85
 # AUR=true
+AUR_YAY=true
 
 # [aur-update]
 # interval=43200
